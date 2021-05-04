@@ -1,0 +1,95 @@
+.title,
+.link {
+  text-transform: uppercase;
+}
+
+.link {
+  display: block;
+  max-width: max-content;
+  text-decoration: none;
+}
+
+.capitalise {
+  display: inline-block;
+}
+
+.capitalise:first-letter {
+  text-transform: uppercase;
+}
+
+.primeForm {
+  max-width: 280px;
+  margin: 2em auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.primeForm input {
+  max-width: 50%;
+  margin-top: 1em;
+}
+
+.formPHP textarea {
+  resize: none;
+}
+
+.form--danger {
+  box-shadow: 0 0 0 4px #f8d7da;
+}
+
+.hidden {
+  display: none;
+}
+
+.fullHeight {
+  min-height: 100vh;
+  position: relative;
+}
+
+.mk-container {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - calc(178px / 2));
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.mk-results {
+  margin-bottom: calc(3.5em * 2);
+  margin-top: 3.5em;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.scraped__container > .scraped__group {
+  background: var(--bs-light);
+  padding: 1em 2em;
+  margin-bottom: 1.3em;  
+}
+
+.scraped__container > .scraped__group {
+  border-bottom: 1px solid var(--bs-info);
+}
+
+.scraped__title h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.scraped__title h2,
+.scraped__title span {
+  color: var(--bs-info);
+}
+
+.scraped__title {
+  margin-bottom: .5em;
+}
+
+.error__message {
+  padding: 1em 2em;
+}

@@ -1,0 +1,45 @@
+<?php
+$cityName = '';
+
+function getCityName() {
+    global $cityName;
+    return $cityName;
+}
+
+function setCityName($value) {
+    global $cityName;
+    $cityName = $value;
+}
+
+// Hook to execute first all onload actions
+function onLoad() {
+    if (isset($_POST["cityName"])) {
+        setCityName($_POST["cityName"]);
+    }
+    echo "The page was loaded successfully!\n";
+    // you check here have you got a DB connection
+    // you can check here is your user logged in
+    // you check here did user accept cookies
+}
+
+function changeCityNameIfEmpty() {
+    $cities = array("Venice", "Rome", "Kamien", "Zakopane");
+    
+    if (getCityName() == "") {
+        setCityName($cities[rand(0, (sizeof($cities)-1))]);
+    }
+    echoCityNameValue();
+}
+
+function echoCityNameComment() {
+    echo "<!-- " . getCityName() . " -->";
+}
+
+
+function echoCityNameValue() {
+    echo "CityName: " . getCityName();
+}
+
+
+onLoad();
+changeCityNameIfEmpty();
